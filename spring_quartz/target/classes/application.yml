@@ -1,0 +1,38 @@
+server:
+  port: 7001
+spring:
+  application:
+    name: spring_quartz
+
+  #数据库配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/spring_learning?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: Believe
+    #Druid连接池
+    type: com.alibaba.druid.pool.DruidDataSource
+  #Rabbitmq配置
+  #  rabbitmq:
+  #    port: 5672
+  #    username: guest
+  #    password: guest
+  #    addresses: 120.78.224.148
+#  redis:
+#    port: 6379
+#    database: 2
+#    host: 120.78.224.148
+
+#mybatis配置
+mybatis-plus:
+  mapper-locations: classpath:com/kk/learning/mapper/xml/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    use-generated-keys: true
+    cache-enabled: true
+  global-config:
+    db-config:
+      logic-not-delete-value: 1
+      logic-delete-value: 0
+  type-aliases-package: com.kk.learning.entity

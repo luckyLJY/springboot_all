@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/spring_learning?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: Believe
+    #Druid
+    type: com.alibaba.druid.pool.DruidDataSource
+  #配置ehcache缓存
+  cache:
+    type: ehcache
+    ehcache:
+      config: ehcache.xml
+
+mybatis-plus:
+  mapper-locations: classpath*:com/kk/cache/mapper/xml/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    use-generated-keys: true
+    #用于开启二级缓存
+    cache-enabled: false
+  global-config:
+    db-config:
+      logic-not-delete-value: 0
+      logic-delete-value: 1
+  type-aliases-package: com.kk.cache.entity
+
