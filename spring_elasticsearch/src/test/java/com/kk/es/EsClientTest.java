@@ -107,6 +107,7 @@ public class EsClientTest {
                         .endObject()
                 .endObject();
         request.mapping(builder);
+        //request.settings(builder);  //自定义设置
         CreateIndexResponse response = client.indices().create(request, RequestOptions.DEFAULT);
         JSON parse = JSONUtil.parse(response);
         System.out.println(parse.toStringPretty());

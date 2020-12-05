@@ -21,7 +21,7 @@ public class RabbitConfig {
 
     /**
      * 到这里，生产者推送消息的消息确认调用回调函数已经完毕。
-     * 可以看到上面写了两个回调函数，一个叫 ConfirmCallback ，一个叫 RetrunCallback；
+     * 可以看到上面写了两个回调函数，一个叫 ConfirmCallback ，一个叫 ReturnCallback；
      * 那么以上这两种回调函数都是在什么情况会触发呢？
      *
      * 先从总体的情况分析，推送消息存在四种情况：
@@ -41,6 +41,7 @@ public class RabbitConfig {
         rabbitTemplate.setMandatory(true);
 
         //回调函数
+        //失败的情况
         rabbitTemplate.setConfirmCallback(new RabbitTemplate.ConfirmCallback() {
             @Override
             public void confirm(CorrelationData correlationData, boolean ack, String cause) {
@@ -50,7 +51,7 @@ public class RabbitConfig {
                 System.out.println("ConfirmCallback:     "+"原因："+cause);
             }
         });
-
+        //成功的情况
         rabbitTemplate.setReturnCallback(new RabbitTemplate.ReturnCallback() {
             @Override
             public void returnedMessage(Message message, int replyCode, String replyText, String exchange, String routingKey) {

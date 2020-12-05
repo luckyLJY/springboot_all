@@ -17,11 +17,11 @@ import java.util.List;
 public interface CacheObjectService extends IService<CacheObject> {
     public List<CacheObject> queryAll();
 
-    public CacheObject getOneObject(int id);
+    public CacheObject getById(int id);
 
     public void saveObject(CacheObject cacheObject);
 
-    public void deleteObject(int id);
+    public void deleteById(int id);
 
     public void deleteAllAfter();
 

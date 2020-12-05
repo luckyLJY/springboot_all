@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ehcache updateCheck="false" name="defaultCache">
     <!--timeToIdleSeconds 当缓存闲置n秒后销毁 -->
     <!--timeToLiveSeconds 当缓存存活n秒后销毁 -->
     <!-- 缓存配置
@@ -18,27 +18,27 @@
     clearOnFlush：内存数量最大时是否清除。 -->
     <!-- 磁盘缓存位置 -->
     <diskStore path="java.io.tmpdir"/>
-    <!-- 默认缓存 -->
+    <!-- 默认缓存配置. -->
     <defaultCache
-            maxElementsInMemory="10000"
+            maxElementsInMemory="20000"
             eternal="false"
             timeToIdleSeconds="120"
             timeToLiveSeconds="120"
+            overflowToDisk="true"
             maxElementsOnDisk="10000000"
+            diskPersistent="false"
             diskExpiryThreadIntervalSeconds="120"
-            memoryStoreEvictionPolicy="LRU">
-        <persistence strategy="localTempSwap"/>
-    </defaultCache>
-
-    <!-- 测试 -->
-    <cache name="myCache"
+            memoryStoreEvictionPolicy="LRU"
+    />
+    <!--字典缓存-->
+    <!--cacheObject相关缓存-->
+    <cache name="objectCache"
+           maxElementsInMemory="10000"
            eternal="false"
-           timeToIdleSeconds="120"
-           timeToLiveSeconds="600"
-           maxEntriesLocalHeap="10000"
-           maxEntriesLocalDisk="10000000"
-           diskExpiryThreadIntervalSeconds="120"
-           overflowToDisk="false"
-           memoryStoreEvictionPolicy="LRU">
+           timeToIdleSeconds="7200"
+           timeToLiveSeconds="14400"
+           overflowToDisk="true"
+           diskPersistent="true"
+           diskExpiryThreadIntervalSeconds="120">
     </cache>
 </ehcache>

@@ -142,10 +142,12 @@ public class RestClientService {
         sourceBuilder.highlighter(highlightBuilder);
         //价格升序排序
         sourceBuilder.sort(new FieldSortBuilder("price").order(SortOrder.ASC));
+
         sourceBuilder.trackTotalHits(true);  //超过1w
         searchRequest.source(sourceBuilder);
         SearchResponse response = client.search(searchRequest, RequestOptions.DEFAULT);
         List<Map<String,Object>> results=new ArrayList<>();
+        //回填高亮字段
         for (SearchHit hit : response.getHits().getHits()) {
             //解析高亮字段
             Map<String, HighlightField> highlightFields = hit.getHighlightFields();

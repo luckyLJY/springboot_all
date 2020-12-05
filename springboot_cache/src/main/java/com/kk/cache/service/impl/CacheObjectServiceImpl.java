@@ -20,19 +20,25 @@ import java.util.List;
  * @since 2020-11-23
  */
 @Service
-@CacheConfig(cacheNames = {"myCache"})
+@CacheConfig(cacheNames = {"objectCache"}) //统一配置缓存组
 public class CacheObjectServiceImpl extends ServiceImpl<CacheObjectMapper, CacheObject> implements CacheObjectService {
 
     @Override
-    @Cacheable(key = "targetClass + methodName+ #p0")
+    @Cacheable(key = "targetClass + methodName" ,sync = true)
     public List<CacheObject> queryAll() {
         return baseMapper.selectList(null);
     }
 
     @Override
-    @Cacheable(value = "cache",key = "#p0")
-    public CacheObject getOneObject(int id) {
+    @Cacheable(key = "'object'+#id", sync = true)
+    public CacheObject getById(int id) {
         return baseMapper.selectById(id);
+    }
+
+    @Override
+    @CacheEvict(key = "'object'+#id")
+    public void deleteById(int id) {
+        baseMapper.deleteById(id);
     }
 
     @Override
@@ -40,22 +46,16 @@ public class CacheObjectServiceImpl extends ServiceImpl<CacheObjectMapper, Cache
         baseMapper.insert(cacheObject);
     }
 
-    @Override
-    @CacheEvict(value = "cache",key = "#p0")
-    public void deleteObject(int id) {
-        baseMapper.deleteById(id);
-    }
-
     //方法调用后清空所有缓存
     @Override
-    @CacheEvict(value="accountCache",allEntries=true)
+    @CacheEvict(/*value="accountCache",*/allEntries=true)
     public void deleteAllAfter() {
         baseMapper.delete(null);
     }
 
     //方法调用前清空所有缓存
     @Override
-    @CacheEvict(value="accountCache",beforeInvocation = true)
+    @CacheEvict(/*value="accountCache",*/beforeInvocation = true)
     public void deleteAllBefore() {
         baseMapper.delete(null);
     }
