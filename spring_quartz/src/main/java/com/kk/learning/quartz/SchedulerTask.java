@@ -37,7 +37,7 @@ public class SchedulerTask {
     /**
      * cron表达式指定周期
      */
-    @Scheduled(cron = "0/5 * * * * ?")
+    //@Scheduled(cron = "0/5 * * * * ?")
     public void reportCurrentTimeWithCron() {
         try {
             Thread.sleep(4*1000);

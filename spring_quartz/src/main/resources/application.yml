@@ -12,16 +12,38 @@ spring:
     password: Believe
     #Druid连接池
     type: com.alibaba.druid.pool.DruidDataSource
-  #Rabbitmq配置
-  #  rabbitmq:
-  #    port: 5672
-  #    username: guest
-  #    password: guest
-  #    addresses: 120.78.224.148
-#  redis:
-#    port: 6379
-#    database: 2
-#    host: 120.78.224.148
+  quartz:
+#    dataSource:
+#      default:
+#        driver: com.mysql.jdbc.Driver
+#        URL: jdbc:mysql://localhost:3306/jobconfig?useUnicode=true&characterEncoding=utf8
+#        user: root
+#        password: 12345678
+#        maxConnections: 5
+    #相关属性配置
+    properties:
+      org:
+        quartz:
+          scheduler:
+            instanceName: quartzScheduler
+            instanceId: AUTO
+          jobStore:
+            class: org.quartz.impl.jdbcjobstore.JobStoreTX
+            driverDelegateClass: org.quartz.impl.jdbcjobstore.StdJDBCDelegate
+            tablePrefix: qrtz_
+            isClustered: false
+            clusterCheckinInterval: 10000
+            useProperties: false
+          threadPool:
+            class: org.quartz.simpl.SimpleThreadPool
+            threadCount: 10
+            threadPriority: 5
+            threadsInheritContextClassLoaderOfInitializingThread: true
+    #数据库方式
+    job-store-type: JDBC
+    #初始化表结构
+    jdbc:
+      initialize-schema: never
 
 #mybatis配置
 mybatis-plus:
@@ -36,3 +58,5 @@ mybatis-plus:
       logic-not-delete-value: 1
       logic-delete-value: 0
   type-aliases-package: com.kk.learning.entity
+
+#quartz

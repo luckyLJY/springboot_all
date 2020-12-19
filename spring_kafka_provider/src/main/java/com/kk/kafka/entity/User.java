@@ -10,9 +10,9 @@ import lombok.Data;
 @Data
 public class User {
     /**
- * id
- */
-private Integer id;
+     * id
+     */
+    private Integer id;
 
     /**
      * 用户名字

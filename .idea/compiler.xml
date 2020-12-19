@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="spring_websocket" />
+        <module name="spring_reactor" />
         <module name="spring_rabbitmq_consumer" />
         <module name="spring_security_client" />
         <module name="springboot_cache" />
@@ -35,6 +36,7 @@
       <module name="spring_quartz" options="-parameters" />
       <module name="spring_rabbitmq_consumer" options="-parameters" />
       <module name="spring_rabbitmq_provider" options="-parameters" />
+      <module name="spring_reactor" options="-parameters" />
       <module name="spring_security_Oauth2" options="-parameters" />
       <module name="spring_security_client" options="-parameters" />
       <module name="spring_websocket" options="-parameters" />
