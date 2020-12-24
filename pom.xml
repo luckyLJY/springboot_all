@@ -12,9 +12,11 @@
         <module>spring_security_client</module>
         <module>spring_kafka_provider</module>
         <module>spring_elasticsearch</module>
-        <module>springboot_cache</module>
+        <module>spring_cache</module>
         <module>spring_async</module>
         <module>spring_reactor</module>
+        <module>spring_validation</module>
+        <module>spring_cache_redisson</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -36,8 +38,9 @@
         <hutool.version>5.4.3</hutool.version>
         <swagger.version>2.7.0</swagger.version>
         <druid.version>1.1.18</druid.version>
-        <lombok.version>1.18.10</lombok.version>
+        <lombok.version>1.18.14</lombok.version>
         <fastjson.version>1.2.47</fastjson.version>
+        <Jackson.version>2.11.0</Jackson.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -99,6 +102,24 @@
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${Jackson.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-core</artifactId>
+                <version>${Jackson.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-annotations -->
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-annotations</artifactId>
+                <version>${Jackson.version}</version>
             </dependency>
 
             <!--测试-->

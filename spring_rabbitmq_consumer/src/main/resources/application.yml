@@ -10,5 +10,3 @@ spring:
     addresses: 120.78.224.148
     port: 5672
     virtual-host: spring_amqp_learning
-
-
