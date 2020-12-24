@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="82a0627c-35af-4056-8084-43777070740c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/spring_amqp_provider/spring_amqp_provider.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_async/spring_async.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_async/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_cache/spring_cache.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_cache_redisson/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_cache_redisson/spring_cache_redisson.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_cache_redisson/src/main/java/com/kk/redisson/RedissonApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_cache_redisson/src/main/java/com/kk/redisson/config/RedisConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_cache_redisson/src/main/java/com/kk/redisson/config/SwaggerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_cache_redisson/src/main/java/com/kk/redisson/service/RedisServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_rabbitmq_consumer/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_validation/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_validation/spring_validation.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_validation/src/main/java/com/kk/validation/ValidationApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_validation/src/main/java/com/kk/validation/config/SwaggerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_validation/src/main/java/com/kk/validation/controller/TaskController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_validation/src/main/java/com/kk/validation/entity/Task.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_validation/src/main/java/com/kk/validation/util/JsonUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_validation/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_websocket/spring_websocket.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring_rabbitmq_consumer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring_rabbitmq_consumer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring_rabbitmq_consumer/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/spring_rabbitmq_consumer/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring_rabbitmq_provider/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring_rabbitmq_provider/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring_security_Oauth2/spring_security_Oauth2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/spring_security_Oauth2/spring_security_Oauth2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot_cache/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring_cache/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot_cache/src/main/java/com/kk/cache/CacheApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring_cache/src/main/java/com/kk/cache/CacheApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot_cache/src/main/java/com/kk/cache/config/DruidConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring_cache/src/main/java/com/kk/cache/config/DruidConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot_cache/src/main/java/com/kk/cache/config/EhcacheConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring_cache/src/main/java/com/kk/cache/config/EhcacheConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot_cache/src/main/java/com/kk/cache/config/MyBatisPlusConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring_cache/src/main/java/com/kk/cache/config/MyBatisPlusConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot_cache/src/main/java/com/kk/cache/config/MyMetaObjectHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring_cache/src/main/java/com/kk/cache/config/MyMetaObjectHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot_cache/src/main/java/com/kk/cache/config/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring_cache/src/main/java/com/kk/cache/config/SwaggerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot_cache/src/main/java/com/kk/cache/controller/CacheObjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring_cache/src/main/java/com/kk/cache/controller/CacheObjectController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot_cache/src/main/java/com/kk/cache/entity/CacheObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring_cache/src/main/java/com/kk/cache/entity/CacheObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot_cache/src/main/java/com/kk/cache/listener/CacheListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring_cache/src/main/java/com/kk/cache/listener/CacheListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot_cache/src/main/java/com/kk/cache/mapper/CacheObjectMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring_cache/src/main/java/com/kk/cache/mapper/CacheObjectMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot_cache/src/main/java/com/kk/cache/mapper/xml/CacheObjectMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring_cache/src/main/java/com/kk/cache/mapper/xml/CacheObjectMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot_cache/src/main/java/com/kk/cache/service/CacheObjectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring_cache/src/main/java/com/kk/cache/service/CacheObjectService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot_cache/src/main/java/com/kk/cache/service/impl/CacheObjectServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring_cache/src/main/java/com/kk/cache/service/impl/CacheObjectServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot_cache/src/main/java/com/kk/cache/utils/CodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring_cache/src/main/java/com/kk/cache/utils/CodeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot_cache/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/spring_cache/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot_cache/src/main/resources/ehcache.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring_cache/src/main/resources/ehcache.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot_cache/src/main/resources/ehcache/ehcache" beforeDir="false" afterPath="$PROJECT_DIR$/spring_cache/src/main/resources/ehcache/ehcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot_cache/src/test/java/com/kk/cache/service/CacheObjectServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring_cache/src/test/java/com/kk/cache/service/CacheObjectServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot_cache/src/test/java/com/kk/cache/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring_cache/src/test/java/com/kk/cache/test.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/spring_validation/src/main/java/com/kk/validation/util/JsonUtil.java" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/spring_cache_redisson/pom.xml" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.2777778" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.kk.redisson.config" />
+      <recent name="com.kk.validation.entity" />
+      <recent name="com.kk.validation.config" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.RedissonApplication">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AsyncApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring_async" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kk.async.AsyncApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CacheApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring_cache" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kk.cache.CacheApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ElasticSearchApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring_elasticsearch" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kk.es.ElasticSearchApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="KafkaProviderApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring_kafka_provider" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kk.kafka.KafkaProviderApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MqConsumerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring_rabbitmq_consumer" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kk.rabbitmq.MqConsumerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MqProviderApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring_rabbitmq_provider" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kk.rabbitmq.MqProviderApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OauthClientApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring_security_client" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kk.security.OauthClientApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QuartzApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring_quartz" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kk.learning.QuartzApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReactorApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring_reactor" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kk.reactor.ReactorApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RedissonApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring_cache_redisson" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kk.redisson.RedissonApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SecurityApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring_security_Oauth2" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kk.security.SecurityApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ValidationApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="spring_validation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kk.validation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kk.validation.ValidationApplication" />
+      <option name="WORKING_DIRECTORY" value="file://$MODULE_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebSocketApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring_websocket" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kk.learning.WebSocketApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.WebSocketApplication" />
+      <item itemvalue="Spring Boot.MqConsumerApplication" />
+      <item itemvalue="Spring Boot.SecurityApplication" />
+      <item itemvalue="Spring Boot.AsyncApplication" />
+      <item itemvalue="Spring Boot.ElasticSearchApplication" />
+      <item itemvalue="Spring Boot.ReactorApplication" />
+      <item itemvalue="Spring Boot.QuartzApplication" />
+      <item itemvalue="Spring Boot.CacheApplication" />
+      <item itemvalue="Spring Boot.MqProviderApplication" />
+      <item itemvalue="Spring Boot.OauthClientApplication" />
+      <item itemvalue="Spring Boot.KafkaProviderApplication" />
+      <item itemvalue="Spring Boot.ValidationApplication" />
+      <item itemvalue="Spring Boot.RedissonApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.ValidationApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1760" y="90" key="#Project_Structure" timestamp="1608803720660">
+      <screen x="1440" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1760" y="90" key="#Project_Structure/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1608803720660" />
+    <state x="1860" y="134" width="1079" height="840" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608793292907">
+      <screen x="1440" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1860" y="134" width="1079" height="840" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1608793292907" />
+    <state x="1860" y="134" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1608793222675" />
+    <state x="2134" y="182" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1608793281331">
+      <screen x="1440" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2134" y="182" key="#com.intellij.ide.macro.MacrosDialog/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1608793281331" />
+    <state x="2166" y="181" key="#com.intellij.ide.util.MemberChooser" timestamp="1608797283369">
+      <screen x="1440" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2166" y="181" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1608797283369" />
+    <state width="1868" height="153" key="GridCell.Tab.0.bottom" timestamp="1608803905604">
+      <screen x="1440" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1868" height="153" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1608803905604" />
+    <state width="1388" height="274" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1608780374202" />
+    <state width="1868" height="336" key="GridCell.Tab.0.bottom/0.23.1440.822/1440.0.1920.1080@1440.0.1920.1080" timestamp="1608802447831" />
+    <state width="1868" height="274" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1608793232387" />
+    <state width="1868" height="153" key="GridCell.Tab.0.center" timestamp="1608803905602">
+      <screen x="1440" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1868" height="153" key="GridCell.Tab.0.center/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1608803905602" />
+    <state width="1388" height="274" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1608780374201" />
+    <state width="1868" height="336" key="GridCell.Tab.0.center/0.23.1440.822/1440.0.1920.1080@1440.0.1920.1080" timestamp="1608802447829" />
+    <state width="1868" height="274" key="GridCell.Tab.0.center/0.23.1440.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1608793232373" />
+    <state width="1868" height="153" key="GridCell.Tab.0.left" timestamp="1608803905602">
+      <screen x="1440" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1868" height="153" key="GridCell.Tab.0.left/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1608803905602" />
+    <state width="1388" height="274" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1608780374200" />
+    <state width="1868" height="336" key="GridCell.Tab.0.left/0.23.1440.822/1440.0.1920.1080@1440.0.1920.1080" timestamp="1608802447828" />
+    <state width="1868" height="274" key="GridCell.Tab.0.left/0.23.1440.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1608793232365" />
+    <state width="1868" height="153" key="GridCell.Tab.0.right" timestamp="1608803905603">
+      <screen x="1440" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1868" height="153" key="GridCell.Tab.0.right/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1608803905603" />
+    <state width="1388" height="274" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1608780374201" />
+    <state width="1868" height="336" key="GridCell.Tab.0.right/0.23.1440.822/1440.0.1920.1080@1440.0.1920.1080" timestamp="1608802447830" />
+    <state width="1868" height="274" key="GridCell.Tab.0.right/0.23.1440.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1608793232381" />
+    <state width="1868" height="153" key="GridCell.Tab.1.bottom" timestamp="1608803905607">
+      <screen x="1440" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1868" height="153" key="GridCell.Tab.1.bottom/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1608803905607" />
+    <state width="1388" height="274" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1608780374205" />
+    <state width="1868" height="336" key="GridCell.Tab.1.bottom/0.23.1440.822/1440.0.1920.1080@1440.0.1920.1080" timestamp="1608802447835" />
+    <state width="1868" height="274" key="GridCell.Tab.1.bottom/0.23.1440.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1608793232410" />
+    <state width="1868" height="153" key="GridCell.Tab.1.center" timestamp="1608803905606">
+      <screen x="1440" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1868" height="153" key="GridCell.Tab.1.center/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1608803905606" />
+    <state width="1388" height="274" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1608780374204" />
+    <state width="1868" height="336" key="GridCell.Tab.1.center/0.23.1440.822/1440.0.1920.1080@1440.0.1920.1080" timestamp="1608802447833" />
+    <state width="1868" height="274" key="GridCell.Tab.1.center/0.23.1440.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1608793232390" />
+    <state width="1868" height="153" key="GridCell.Tab.1.left" timestamp="1608803905605">
+      <screen x="1440" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1868" height="153" key="GridCell.Tab.1.left/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1608803905605" />
+    <state width="1388" height="274" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1608780374203" />
+    <state width="1868" height="336" key="GridCell.Tab.1.left/0.23.1440.822/1440.0.1920.1080@1440.0.1920.1080" timestamp="1608802447832" />
+    <state width="1868" height="274" key="GridCell.Tab.1.left/0.23.1440.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1608793232388" />
+    <state width="1868" height="153" key="GridCell.Tab.1.right" timestamp="1608803905607">
+      <screen x="1440" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1868" height="153" key="GridCell.Tab.1.right/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1608803905607" />
+    <state width="1388" height="274" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1608780374204" />
+    <state width="1868" height="336" key="GridCell.Tab.1.right/0.23.1440.822/1440.0.1920.1080@1440.0.1920.1080" timestamp="1608802447834" />
+    <state width="1868" height="274" key="GridCell.Tab.1.right/0.23.1440.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1608793232398" />
+    <state x="1763" y="53" key="SettingsEditor" timestamp="1608797256288">
+      <screen x="1440" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1763" y="53" key="SettingsEditor/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1608797256288" />
+    <state x="1760" y="90" key="SettingsEditor/0.23.1440.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1608793376470" />
+    <state x="2192" y="90" key="SpringBootCustomization" timestamp="1608803621716">
+      <screen x="1440" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2192" y="90" key="SpringBootCustomization/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1608803621716" />
+    <state x="1667" y="20" key="new project wizard" timestamp="1608803453509">
+      <screen x="1440" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1667" y="20" key="new project wizard/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1608803453509" />
+    <state x="2085" y="90" key="spring file set editor" timestamp="1608803639254">
+      <screen x="1440" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2085" y="90" key="spring file set editor/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1608803639254" />
+  </component>
+</project>

@@ -1,0 +1,28 @@
+server:
+  port: 8081
+  #防止cookie冲突
+  servlet:
+    session:
+      cookie:
+        name: OAUTH2-CLIENT-SESSIONID01
+#类比微信授权登陆
+#授权服务器地址
+oauth2:
+  server:
+    url: http://localhost:8080   #微信的认证中心服务器地址
+#与授权服务器对应的配置
+security:
+  oauth2:
+    client:
+      client-id: admin #类比开发者的appId
+      client-secret: 112233 #类比开发者的appSecret
+      #资源拥有者认证
+      user-authorization-uri: ${oauth2.server.url}/oauth/authorize
+      #获取令牌
+      access-token-uri: ${oauth2.server.url}/oauth/token
+    resource:
+      jwt:
+        #校验令牌
+        key-uri: ${oauth2.server.url}/oauth/token_key
+
+

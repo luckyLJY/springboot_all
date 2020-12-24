@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>rabbitmq_provider</artifactId>
+    <artifactId>spirng_rabbitmq_provider</artifactId>
     <dependencies>
         <!--web-->
         <dependency>

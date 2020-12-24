@@ -1,0 +1,17 @@
+server:
+  port: 8002
+spring:
+  application:
+    name: spring_rabbitmq_provider
+  #配置rabbitmq服务区
+  rabbitmq:
+    username: guest
+    password: guest
+    addresses: 120.78.224.148
+    port: 5672
+    virtual-host: spring_amqp_learning
+    #测试confirm机制（消息回调）
+    #确认消息已发送到交换机(Exchange)
+    publisher-confirms: true
+    #确认消息已发送到队列(Queue)
+    publisher-returns: true
