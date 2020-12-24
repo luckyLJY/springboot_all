@@ -1,8 +1,0 @@
-spring:
-  redis:
-    host: 120.78.224.148
-    database: 1
-
-#jwt配置
-jwt:
-  key: test_key

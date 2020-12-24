@@ -7,17 +7,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="spring_quartz" />
         <module name="spring_websocket" />
+        <module name="spring_elasticsearch" />
+        <module name="spring_async" />
         <module name="spring_rabbitmq_consumer" />
         <module name="spring_security_client" />
-        <module name="springboot_cache" />
-        <module name="spring_async" />
-        <module name="spring_amqp_provider" />
-        <module name="spring_quartz" />
         <module name="spring_rabbitmq_provider" />
-        <module name="spring_kafka_provider" />
+        <module name="rabbitmq_consumer" />
+        <module name="security" />
+        <module name="rabbitmq_provider" />
         <module name="spring_security_Oauth2" />
-        <module name="spring_elasticsearch" />
+        <module name="springboot_cache" />
+        <module name="spring_amqp_provider" />
+        <module name="spring_kafka_provider" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -28,6 +31,9 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="rabbitmq" options="-parameters" />
+      <module name="rabbitmq_consumer" options="-parameters" />
+      <module name="rabbitmq_provider" options="-parameters" />
+      <module name="security" options="-parameters" />
       <module name="spring_amqp_provider" options="-parameters" />
       <module name="spring_async" options="-parameters" />
       <module name="spring_elasticsearch" options="-parameters" />
