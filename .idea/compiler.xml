@@ -9,8 +9,12 @@
         <outputRelativeToContentRoot value="true" />
         <module name="spring_quartz" />
         <module name="spring_websocket" />
+<<<<<<< HEAD
         <module name="spring_elasticsearch" />
         <module name="spring_async" />
+=======
+        <module name="spring_reactor" />
+>>>>>>> e0dfea76f24bf67671e7aad68b893b3b8cbef682
         <module name="spring_rabbitmq_consumer" />
         <module name="spring_security_client" />
         <module name="spring_rabbitmq_provider" />
@@ -41,6 +45,7 @@
       <module name="spring_quartz" options="-parameters" />
       <module name="spring_rabbitmq_consumer" options="-parameters" />
       <module name="spring_rabbitmq_provider" options="-parameters" />
+      <module name="spring_reactor" options="-parameters" />
       <module name="spring_security_Oauth2" options="-parameters" />
       <module name="spring_security_client" options="-parameters" />
       <module name="spring_websocket" options="-parameters" />

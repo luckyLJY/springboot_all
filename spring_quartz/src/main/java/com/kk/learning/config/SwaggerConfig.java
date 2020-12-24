@@ -32,7 +32,7 @@ public class SwaggerConfig {
                 .groupName("WebApi")
                 .enable(true)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.kk.miaosha.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.kk.learning.controller"))
                 //.paths(Predicates.not(PathSelectors.regex("/admin/.*")))
                 .paths(Predicates.not(PathSelectors.regex("/error.*")))
                 .build();

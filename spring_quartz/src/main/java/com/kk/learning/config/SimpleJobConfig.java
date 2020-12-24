@@ -15,13 +15,13 @@ import java.util.concurrent.ScheduledThreadPoolExecutor;
  */
 @Configuration
 public class SimpleJobConfig  {
-    @Bean
+    //@Bean
     public JobDetail simpleJobDetail() {
         return JobBuilder.newJob(SimpleJob.class).withIdentity("myJob").storeDurably()
                 .usingJobData("serviceCode","delete overdue orders")
                 .build();
     }
-    @Bean
+    //@Bean
     public Trigger simpleJobTrigger() {
         //定义每三秒执行一次
         SimpleScheduleBuilder simpleScheduleBuilder = SimpleScheduleBuilder.simpleSchedule().withIntervalInSeconds(3).repeatForever();
