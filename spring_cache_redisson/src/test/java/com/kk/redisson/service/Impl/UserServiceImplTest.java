@@ -23,6 +23,15 @@ class UserServiceImplTest {
             thread.start();
         }
         Thread.sleep(10000);
+    }
 
+    @Test
+    void add(){
+        userService.add(1L);
+    }
+
+    @Test
+    void pollExpiredUsers(){
+        userService.pollExpiredUsers().stream().forEach(System.out::println);
     }
 }

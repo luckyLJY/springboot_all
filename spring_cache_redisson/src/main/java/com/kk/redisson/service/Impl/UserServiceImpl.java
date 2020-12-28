@@ -3,12 +3,14 @@ package com.kk.redisson.service.Impl;
 import com.kk.redisson.common.SignUpResponse;
 import com.kk.redisson.constant.RedisConstants;
 import com.kk.redisson.service.IUserService;
-import org.redisson.api.RLock;
-import org.redisson.api.RedissonClient;
+import org.redisson.api.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.Optional;
 import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
 
 /**
  * @author luokexiong
@@ -40,4 +42,28 @@ public class UserServiceImpl implements IUserService {
         }
         return new SignUpResponse(false, "", "登录错误");
     }
+
+    @Override
+    public boolean add(Long userId) {
+        // 添加了新用户
+        RBucket<Long> bucket = redissonClient.getBucket(RedisConstants.generateUserKey(userId));
+        boolean flag = bucket.trySet(userId);
+        if (flag) {
+            System.out.println("延时队列");
+            RQueue<Long> queue = redissonClient.getQueue(RedisConstants.USER_LIST);
+            RDelayedQueue<Long> delayedQueue = redissonClient.getDelayedQueue(queue);
+            delayedQueue.offer(userId, 10L, TimeUnit.SECONDS);
+        }
+        return flag;
+    }
+
+    @Override
+    public List<Long> pollExpiredUsers() {
+        RQueue<Long> queue = redissonClient.getQueue(RedisConstants.USER_LIST);
+        List<Long> collect = queue.readAll();
+        //RDelayedQueue<Long> delayedQueue = redissonClient.getDelayedQueue(queue);
+        //delayedQueue.destroy();
+        return collect;
+    }
+
 }

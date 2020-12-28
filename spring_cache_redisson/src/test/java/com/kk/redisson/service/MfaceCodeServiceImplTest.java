@@ -6,7 +6,9 @@ import com.kk.redisson.util.RedisUtils;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.redisson.api.RBitSet;
 import org.redisson.api.RBucket;
+import org.redisson.api.RHyperLogLog;
 import org.redisson.api.RedissonClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -58,20 +60,26 @@ class MfaceCodeServiceImplTest {
     }
 
     @Test
-    void test() {
-        User user = new User()
-                .setId(1)
-                .setName("llll")
-                .setBirthday(LocalDateTime.now());
+    void test1(){
+        //统计
+        /*RBitSet bitSet = redissonClient.getBitSet("DATE-COUNT-USER");
+        bitSet.set(1L);
+        bitSet.set(2L);
+        bitSet.set(3L);
+        bitSet.set(3L);
+        bitSet.set(3L);
+        bitSet.set(5L);
+        System.out.println(bitSet.cardinality());
+        System.out.println(bitSet.length());*/
 
-        redisUtils.set("test", user);
+        RHyperLogLog<Long> hyperLogLog = redissonClient.getHyperLogLog("DATE-COUNT-USER");
+        hyperLogLog.add(1L);
+        hyperLogLog.add(2L);
+        hyperLogLog.add(3L);
+        hyperLogLog.add(4L);
+        hyperLogLog.add(4L);
+        hyperLogLog.add(4L);
 
-        User user1 = redisUtils.get("test");
-        System.out.println(user1);
-
-       /* RBucket<User> test = redissonClient.getBucket("test");
-        test.set(user);
-        User user2 = test.get();
-        System.out.println(user2);*/
+        System.out.println(hyperLogLog.count());
     }
 }
