@@ -10,6 +10,7 @@ import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.Range;
 
 import javax.validation.constraints.*;
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 /**
@@ -46,6 +47,18 @@ public class Task {
     @Length(min = 1, max = 16, message = "字符串长度大于1小于16")
     @ApiModelProperty(value = "机器描述信息")
     String machine;
+
+    @Max(value = Long.MAX_VALUE)
+    @Min(value = 1L)
+    Float floatType;
+
+    @Max(value = Long.MAX_VALUE)
+    @Min(value = 1L)
+    Double doubleType;
+
+    @DecimalMax(value = "9999999999.99999999")
+    BigDecimal decimal;
+
    /* @Past
     @NotNull(message = "不能为空")
     @ApiModelProperty(value = "发布时间", required = true)

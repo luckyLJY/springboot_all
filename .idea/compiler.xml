@@ -12,12 +12,12 @@
         <module name="spring_rabbitmq_consumer" />
         <module name="spring_async" />
         <module name="spring_cache_redisson" />
-        <module name="spring_reactor" />
+        <module name="spring_elasticsearch" />
         <module name="spring_quartz" />
         <module name="spring_rabbitmq_provider" />
         <module name="spring_kafka_provider" />
         <module name="spring_security_Oauth2" />
-        <module name="spring_elasticsearch" />
+        <module name="spring_reactor" />
         <module name="spring_security_client" />
         <module name="spring_cache" />
       </profile>
