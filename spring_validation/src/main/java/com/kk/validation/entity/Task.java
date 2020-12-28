@@ -46,7 +46,6 @@ public class Task {
     @Length(min = 1, max = 16, message = "字符串长度大于1小于16")
     @ApiModelProperty(value = "机器描述信息")
     String machine;
-
    /* @Past
     @NotNull(message = "不能为空")
     @ApiModelProperty(value = "发布时间", required = true)

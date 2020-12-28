@@ -9,6 +9,7 @@ import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.util.StringUtils;
 
 import java.io.InputStream;
 import java.time.LocalDateTime;
@@ -216,28 +217,13 @@ public final class JsonUtil {
      * @return 是否是json
      */
     public static boolean isJson(String json) {
-        if (isBlank(json)) {
+        if (StringUtils.isBlank(json)) {
             return false;
         }
         try {
             return deserialize(json, Map.class).isPresent();
         } catch (Exception e) {
             return false;
-        }
-    }
-
-    private static boolean isBlank(String cs){
-        int strLen = cs.length();
-        if (strLen == 0) {
-            return true;
-        } else {
-            for(int i = 0; i < strLen; ++i) {
-                if (!Character.isWhitespace(cs.charAt(i))) {
-                    return false;
-                }
-            }
-
-            return true;
         }
     }
 }

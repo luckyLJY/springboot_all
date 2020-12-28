@@ -12,6 +12,12 @@
     <artifactId>spring_cache_redisson</artifactId>
 
     <dependencies>
+        <!--common3工具类-->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.5</version>
+        </dependency>
         <!--开启 cache 缓存 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -64,6 +70,20 @@
             <artifactId>mybatis-plus-generator</artifactId>
             <version>3.0.5</version>
         </dependency>-->
+        <dependency>
+            <groupId>de.ruedigermoeller</groupId>
+            <artifactId>fst</artifactId>
+            <version>2.43</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+        </dependency>
         <!--web-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
