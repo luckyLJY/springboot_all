@@ -24,7 +24,7 @@ public class TaskController {
 
     @PostMapping("/json/tasks")
     @ApiOperation(value = "获取驼峰命名格式的json")
-    public Task taskJson(@RequestBody @Valid Task task) {
+    public Task taskJson(@RequestBody Task task) {
         return task;
     }
 

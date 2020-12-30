@@ -217,7 +217,7 @@ public final class JsonUtil {
      * @return 是否是json
      */
     public static boolean isJson(String json) {
-        if (StringUtils.isBlank(json)) {
+        if (StringUtils.isEmpty(json)) {
             return false;
         }
         try {
