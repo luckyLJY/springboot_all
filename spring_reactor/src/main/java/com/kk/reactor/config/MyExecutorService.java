@@ -15,7 +15,7 @@ import java.util.concurrent.Executors;
 @Configuration
 public class MyExecutorService {
 
-    @Bean("myExecutorPool1")
+    /*@Bean("myExecutorPool1")
     public Executor executor1(){
         ThreadPoolTaskExecutor taskExecutor=new ThreadPoolTaskExecutor();
         taskExecutor.setCorePoolSize(5);
@@ -37,5 +37,5 @@ public class MyExecutorService {
         taskExecutor.setKeepAliveSeconds(30);
         taskExecutor.initialize();
         return taskExecutor;
-    }
+    }*/
 }

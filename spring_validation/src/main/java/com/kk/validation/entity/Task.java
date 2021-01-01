@@ -48,13 +48,13 @@ public class Task {
     @ApiModelProperty(value = "机器描述信息")
     String machine;
 
-    @Max(value = Long.MAX_VALUE)
-    @Min(value = 1L)
-    Float floatType;
+    @Max(value = 100)
+    @Min(value = 0)
+    float floatType;
 
-    @Max(value = Long.MAX_VALUE)
-    @Min(value = 1L)
-    Double doubleType;
+    @Max(value = 100)
+    @Min(value = 0)
+    double doubleType;
 
     @DecimalMax(value = "9999999999.99999999")
     BigDecimal decimal;

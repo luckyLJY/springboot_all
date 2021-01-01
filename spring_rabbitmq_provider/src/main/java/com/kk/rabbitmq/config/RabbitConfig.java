@@ -1,7 +1,6 @@
 package com.kk.rabbitmq.config;
 
 
-import com.rabbitmq.client.AMQP;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.connection.CorrelationData;

@@ -3,6 +3,7 @@ package com.kk.reactor.config;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.aop.interceptor.AsyncUncaughtExceptionHandler;
 import org.springframework.aop.interceptor.SimpleAsyncUncaughtExceptionHandler;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.task.AsyncTaskExecutor;
 import org.springframework.scheduling.annotation.AsyncConfigurer;
@@ -39,8 +40,33 @@ public class AsyncExecutorConfig implements AsyncConfigurer {
         return new AsyncUncaughtExceptionHandler() {
             @Override
             public void handleUncaughtException(Throwable ex, Method method, Object... params) {
+                System.out.println("异常捕获");
                 log.warn(ex.getMessage());
             }
         };
+    }
+
+    @Bean("myExecutorPool1")
+    public Executor executor1(){
+        ThreadPoolTaskExecutor taskExecutor=new ThreadPoolTaskExecutor();
+        taskExecutor.setCorePoolSize(5);
+        taskExecutor.setMaxPoolSize(10);
+        taskExecutor.setQueueCapacity(100);
+        taskExecutor.setThreadNamePrefix("MyExecutor1-");
+        taskExecutor.setKeepAliveSeconds(30);
+        taskExecutor.initialize();
+        return taskExecutor;
+    }
+
+    @Bean("myExecutorPool2")
+    public Executor executor2(){
+        ThreadPoolTaskExecutor taskExecutor=new ThreadPoolTaskExecutor();
+        taskExecutor.setCorePoolSize(5);
+        taskExecutor.setMaxPoolSize(10);
+        taskExecutor.setQueueCapacity(100);
+        taskExecutor.setThreadNamePrefix("MyExecutor2-");
+        taskExecutor.setKeepAliveSeconds(30);
+        taskExecutor.initialize();
+        return taskExecutor;
     }
 }
