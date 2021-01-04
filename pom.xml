@@ -17,6 +17,7 @@
         <module>spring_reactor</module>
         <module>spring_validation</module>
         <module>spring_cache_redisson</module>
+        <module>spring_cacheCustom</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
