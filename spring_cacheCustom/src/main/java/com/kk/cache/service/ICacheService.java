@@ -1,6 +1,5 @@
 package com.kk.cache.service;
 
-
 import com.kk.cache.entity.User;
 
 /**
@@ -12,11 +11,11 @@ import com.kk.cache.entity.User;
  */
 public interface ICacheService {
 
-    public void insert(User user);
+    void insert(User user);
 
-    public void delete(Integer id);
+    void delete(Integer id);
 
-    public User getOne(Integer id);
+    User getOne(Integer id);
 
-    public User update(User user);
+    User update(User user);
 }

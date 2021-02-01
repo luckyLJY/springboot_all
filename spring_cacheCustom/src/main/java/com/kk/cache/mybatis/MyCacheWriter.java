@@ -24,10 +24,29 @@ public interface MyCacheWriter {
 
     void put(Object key, Object value, @Nullable Duration ttl);
 
+    /**
+     * 实际调用put
+     *
+     * @param key   key
+     * @param value value
+     */
     void put(Object key, Object value);
 
+    /**
+     * 实际调用get
+     *
+     * @param key key
+     * @return value
+     */
     Object get(Object key);
 
+    /**
+     * 实际调用putIfAbsent
+     *
+     * @param key   key
+     * @param value value
+     * @return value
+     */
     Object putIfAbsent(Object key, Object value);
 
     Object putIfAbsent(Object key, Object value, @Nullable Duration ttl);

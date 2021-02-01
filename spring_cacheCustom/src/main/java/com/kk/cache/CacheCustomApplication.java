@@ -12,7 +12,7 @@ import org.springframework.context.annotation.ComponentScan;
  **/
 @SpringBootApplication
 @ComponentScan(basePackages = "com.kk")
-@MapperScan("com.kk.cache.jdbc.mapper")
+@MapperScan("com.kk.cache.mybatis.mapper")
 public class CacheCustomApplication {
     public static void main(String[] args) {
         SpringApplication.run(CacheCustomApplication.class, args);

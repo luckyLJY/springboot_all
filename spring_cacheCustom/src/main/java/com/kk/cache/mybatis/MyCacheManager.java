@@ -14,6 +14,8 @@ import java.util.List;
 import java.util.Map;
 
 /**
+ * 缓存管理器
+ *
  * @author: Kk
  * @create: 2021-01-02 13:22
  **/
@@ -53,8 +55,9 @@ public class MyCacheManager extends AbstractTransactionSupportingCacheManager {
         return caches;
     }
 
-    /*
+    /**
      * (non-Javadoc)
+     *
      * @see org.springframework.cache.support.AbstractCacheManager#getMissingCache(java.lang.String)
      */
     @Override
@@ -62,15 +65,16 @@ public class MyCacheManager extends AbstractTransactionSupportingCacheManager {
         return allowInFlightCacheCreation ? createMyCache(name, defaultCacheConfig) : null;
     }
 
-    /*
+    /**
      * (non-Javadoc)
+     *
      * @see org.springframework.cache.support.AbstractCacheManager#loadCaches()
      */
     private MyCache createMyCache(String key, MyCacheConfiguration config) {
-        return new MyCache(allowInFlightCacheCreation,key,cacheWriter,config!=null?config:defaultCacheConfig);
+        return new MyCache(allowInFlightCacheCreation, key, cacheWriter, config != null ? config : defaultCacheConfig);
     }
 
-    public static MyCacheManager build(MyCacheWriter writer, MyCacheConfiguration config,Map<String ,MyCacheConfiguration> map){
+    public static MyCacheManager build(MyCacheWriter writer, MyCacheConfiguration config, Map<String, MyCacheConfiguration> map) {
         MyCacheManager cacheManager = new MyCacheManager(writer, config, map);
         cacheManager.setTransactionAware(true);
         cacheManager.initializeCaches();

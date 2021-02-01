@@ -2,7 +2,7 @@ spring:
   application:
     name: spring-kafka-provider
   kafka:
-    bootstrap-servers: 192.168.198.132:9092
+    bootstrap-servers: 127.0.0.1:9092
     #设置默认组
     consumer:
       group-id: 0
