@@ -16,7 +16,7 @@ import java.util.concurrent.Future;
 @RestController
 public class TestController {
     @Autowired
-    AsyncService asyncService;
+    private AsyncService asyncService;
 
     //一个请求开启两个异步线程
     @GetMapping("testAsync")

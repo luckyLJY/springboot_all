@@ -23,9 +23,13 @@
         <module name="spring_kafka_provider" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="spring-myRedis-starter" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="spring-myRedis-starter" options="-parameters" />
       <module name="spring_async" options="-parameters" />
       <module name="spring_cache" options="-parameters" />
       <module name="spring_cacheCustom" options="-parameters" />
