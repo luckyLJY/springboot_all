@@ -1,9 +1,11 @@
 package com.kk.validation.controller;
 
+import com.kk.validation.controller.request.StringRequest;
 import com.kk.validation.entity.Task;
 import com.kk.validation.util.JsonUtil;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -37,5 +39,10 @@ public class TaskController {
         // 转蛇形
         System.out.println(task.getTestEnum().getMsg());
         return JsonUtil.toStringMap(task);
+    }
+
+    @GetMapping("/string")
+    public String getString(@Valid StringRequest request) {
+        return request.getLength() + ":" + request.getNotBlank();
     }
 }
