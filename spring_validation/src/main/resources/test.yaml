@@ -1,0 +1,8 @@
+test:
+  demo:
+    myConfig:
+      seconds: 18:30:00
+      date: 2021-02-26 18:30:00
+      # localDateTime: 2021-02-26 18:30:00
+      # localDate: 2021-02-26
+      # localTime: 18:30:00
