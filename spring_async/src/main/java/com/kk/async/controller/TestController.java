@@ -5,8 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.Future;
+import javax.annotation.Resource;
+import java.util.concurrent.*;
 
 /**
  * @description:
@@ -17,6 +17,8 @@ import java.util.concurrent.Future;
 public class TestController {
     @Autowired
     private AsyncService asyncService;
+    @Resource(name = "serviceExecutor")
+    private Executor serviceExecutor;
 
     //一个请求开启两个异步线程
     @GetMapping("testAsync")
@@ -34,5 +36,12 @@ public class TestController {
         String time="总耗时："+(end-start);
         System.out.println(Thread.currentThread().getName()+"---->"+time);
         return "ok";
+    }
+
+    @GetMapping("interceptor")
+    public CompletionStage<String> testInterceptor() {
+        System.out.println("controller: " + Thread.currentThread().getName() + " - " + Thread.currentThread().getId());
+
+        return CompletableFuture.supplyAsync(() -> asyncService.testInterceptor(), serviceExecutor);
     }
 }

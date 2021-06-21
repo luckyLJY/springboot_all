@@ -21,7 +21,6 @@ public class AsyncService {
             Thread.sleep(2000);
             long end = System.currentTimeMillis();
             String result = "doOneSeconds spend time: " + (end - start);
-            //System.out.println(result);
             return new AsyncResult<>(result);
         } catch (InterruptedException e) {
             return new AsyncResult<>("线程池异常: "+e.getMessage());
@@ -35,10 +34,19 @@ public class AsyncService {
             Thread.sleep(2000);
             long end = System.currentTimeMillis();
             String result = "doTwoSeconds spend time: " + (end - start);
-            //System.out.println(result);
             return new AsyncResult<>(result);
         } catch (InterruptedException e) {
             return new AsyncResult<>("线程池异常: "+e.getMessage());
         }
+    }
+
+    public String testInterceptor() {
+        try {
+            Thread.sleep(3000);
+            System.out.println("service: " + Thread.currentThread().getName() + " - " + Thread.currentThread().getId());
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return "interceptor";
     }
 }
