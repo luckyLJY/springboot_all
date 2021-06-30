@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 /**
  * @program: springboot_all
  * @description: UserDetails实现类
- * @author: Kk
+ * @author: KkT
  * @create: 2020-11-09 11:44
  **/
 @Service
