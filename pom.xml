@@ -18,6 +18,7 @@
         <module>spring_validation</module>
         <module>spring_cache_redisson</module>
         <module>spring_cacheCustom</module>
+        <module>spring_shiro</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

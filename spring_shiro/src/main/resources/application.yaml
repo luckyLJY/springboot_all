@@ -1,0 +1,8 @@
+# jwt配置
+local:
+  jwt:
+    expired: 180d
+    secret: kkmystery
+
+swagger2:
+  enable: true
