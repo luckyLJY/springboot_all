@@ -1,5 +1,6 @@
 package com.kk.listener;
 
+import com.kk.event.QueueEvent;
 import com.kk.event.UserRegisterEvent;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.event.EventListener;
@@ -22,8 +23,15 @@ public class CouponUserRegisterListener {
      *
      * @param event 事件
      */
-    @EventListener
-    public void sendCoupon(UserRegisterEvent event) {
-        log.info("CouponUserRegisterListener: {} - 给用户: {} 发送优惠券", Thread.currentThread().getName(), event.getUsername());
+    @EventListener(classes = {UserRegisterEvent.class, QueueEvent.class})
+    public void sendCoupon(Object event) {
+        if (event instanceof UserRegisterEvent) {
+            UserRegisterEvent register = (UserRegisterEvent) event;
+            log.info("CouponUserRegisterListener: {} - 给用户: {} 发送优惠券", Thread.currentThread().getName(), register.getUsername());
+        }
+        if (event instanceof QueueEvent) {
+            QueueEvent queue = (QueueEvent) event;
+            log.info("CouponUserRegisterListener: {} - 给用户: {} 发送优惠券", Thread.currentThread().getName(), queue.getNumber());
+        }
     }
 }
