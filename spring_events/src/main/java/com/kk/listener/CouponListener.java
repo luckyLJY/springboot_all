@@ -17,7 +17,7 @@ import org.springframework.stereotype.Component;
 @Component
 @Order(1)
 @Slf4j
-public class CouponUserRegisterListener {
+public class CouponListener {
     /**
      * 监听对象为UserRegisterEvent
      *

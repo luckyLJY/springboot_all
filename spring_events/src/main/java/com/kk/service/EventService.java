@@ -9,6 +9,7 @@ package com.kk.service;
  */
 
 import com.kk.event.QueueEvent;
+import com.kk.event.SonEvent;
 import com.kk.event.UserRegisterEvent;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.ApplicationContext;
@@ -29,6 +30,10 @@ public class EventService /*implements ApplicationContextAware, ApplicationEvent
         for (int i = 1; i <= 2; i++) {
             applicationEventPublisher.publishEvent(new QueueEvent(this, i));
         }
+    }
+
+    public void sonEventPublish() {
+        applicationEventPublisher.publishEvent(new SonEvent(this, 1));
     }
 
     /* @Override

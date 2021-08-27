@@ -1,5 +1,6 @@
 package com.kk.controller;
 
+import com.kk.service.EventService;
 import com.kk.service.UserRegisterEventService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,6 +24,7 @@ import java.util.concurrent.Executor;
 @RequiredArgsConstructor
 public class EventController {
     private final UserRegisterEventService userRegisterEventService;
+    private final EventService eventService;
     @Resource(name = "adminControllerBizExecutor")
     private Executor executor;
 
@@ -34,5 +36,10 @@ public class EventController {
     @GetMapping("/queue")
     public CompletionStage<Boolean> queue() {
         return CompletableFuture.supplyAsync(() -> userRegisterEventService.queue(), executor);
+    }
+
+    @GetMapping("/son")
+    public CompletionStage<Void> son() {
+        return CompletableFuture.runAsync(() -> eventService.sonEventPublish(), executor);
     }
 }

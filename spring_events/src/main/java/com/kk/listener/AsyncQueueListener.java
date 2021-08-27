@@ -17,10 +17,10 @@ import org.springframework.stereotype.Component;
 @Component
 @Order(3)
 @Slf4j
-public class AsyncUserRegisterListener {
+public class AsyncQueueListener {
 
     /**
-     * 监听对象为UserRegisterEvent
+     * 监听对象为QueueEvent
      *
      * @param event 事件
      */
