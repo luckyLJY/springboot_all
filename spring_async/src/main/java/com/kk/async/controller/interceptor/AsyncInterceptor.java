@@ -1,6 +1,5 @@
 package com.kk.async.controller.interceptor;
 
-import org.springframework.web.servlet.AsyncHandlerInterceptor;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -24,7 +23,6 @@ public class AsyncInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         System.out.println("preHandle: " + Thread.currentThread().getName() + " - " + Thread.currentThread().getId());
-
         return true;
     }
 

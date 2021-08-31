@@ -1,6 +1,9 @@
 package com.kk.async.config;
 
+import com.kk.async.threadpool.core.Alert;
+import com.kk.async.threadpool.core.DynamicThreadPoolExecutor;
 import org.springframework.aop.interceptor.AsyncUncaughtExceptionHandler;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.AsyncConfigurer;
@@ -9,7 +12,7 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
 import java.lang.reflect.Method;
 import java.util.concurrent.Executor;
-import java.util.concurrent.RejectedExecutionHandler;
+import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
 
 
@@ -25,6 +28,8 @@ import java.util.concurrent.ThreadPoolExecutor;
 @EnableAsync
 @Configuration
 public class TaskExecutorConfig implements AsyncConfigurer {
+    @Autowired
+    private Alert monitor;
 
     /**
      * 配置类继承AsyncConfigurer接口并重写getAsyncExecutor方法，并返回ThreadPoolTaskExecutor，
@@ -68,5 +73,21 @@ public class TaskExecutorConfig implements AsyncConfigurer {
         executor.setRejectedExecutionHandler(new ThreadPoolExecutor.AbortPolicy());
         executor.initialize();
         return executor;
+    }
+
+    @Bean(destroyMethod = "shutdown")
+    public Executor dynamicExecutor() {
+        return new DynamicThreadPoolExecutor(
+                "动态线程池",
+                2,
+                4,
+                30,
+                2,
+                Executors.defaultThreadFactory(),
+                new ThreadPoolExecutor.AbortPolicy(),
+                2,
+                2,
+                monitor
+        );
     }
 }

@@ -80,30 +80,41 @@ public class DynamicThreadPoolManager implements ApplicationRunner, ApplicationC
 
     private ThreadPoolDetailInfoVO mergeDetails(DynamicThreadPoolExecutor threadPool) {
         return ThreadPoolDetailInfoVO
-            .builder()
-            .appName(threadPool.getAppName())
-            .threadPoolName(threadPool.getThreadPoolName())
-            .corePoolSize(threadPool.getCorePoolSize())
-            .maxPoolSize(threadPool.getMaxPoolSize())
-            .queueCapacity(threadPool.getQueueCapacity())
-            .keepAliveSeconds(threadPool.getKeepAliveSeconds())
-            .queueRemainingCapacity(threadPool.getQueue().remainingCapacity())
-            .activeCount(threadPool.getActiveCount())
-            .allowCoreThreadTimeOut(threadPool.allowsCoreThreadTimeOut())
-            .completedTaskCount(threadPool.getCompletedTaskCount())
-            .largestPoolSize(threadPool.getLargestPoolSize())
-            .queueType(threadPool.getQueue().getClass().getSimpleName())
-            .taskCount(threadPool.getTaskCount())
-            .queueSize(threadPool.getQueue().size())
-            .poolSize(threadPool.getPoolSize())
-            .rejectCount(threadPool.getRejectCount())
-            .currentTime(new Date(System.currentTimeMillis()))
-            .threadFactoryType(threadPool.getThreadFactory().getClass().getSimpleName())
-            .rejectHandlerType(threadPool.getRejectedExecutionHandler().getClass().getSimpleName())
-            .build();
+                .builder()
+                .appName(threadPool.getAppName())
+                .threadPoolName(threadPool.getThreadPoolName())
+                .corePoolSize(threadPool.getCorePoolSize())
+                .maxPoolSize(threadPool.getMaxPoolSize())
+                .queueCapacity(threadPool.getQueueCapacity())
+                .keepAliveSeconds(threadPool.getKeepAliveSeconds())
+                .queueRemainingCapacity(threadPool.getQueue().remainingCapacity())
+                .activeCount(threadPool.getActiveCount())
+                .allowCoreThreadTimeOut(threadPool.allowsCoreThreadTimeOut())
+                .completedTaskCount(threadPool.getCompletedTaskCount())
+                .largestPoolSize(threadPool.getLargestPoolSize())
+                .queueType(threadPool.getQueue().getClass().getSimpleName())
+                .taskCount(threadPool.getTaskCount())
+                .queueSize(threadPool.getQueue().size())
+                .poolSize(threadPool.getPoolSize())
+                .rejectCount(threadPool.getRejectCount())
+                .currentTime(new Date(System.currentTimeMillis()))
+                .threadFactoryType(threadPool.getThreadFactory().getClass().getSimpleName())
+                .rejectHandlerType(threadPool.getRejectedExecutionHandler().getClass().getSimpleName())
+                .build();
     }
 
     private ThreadPoolArgsVO mergeArgs(DynamicThreadPoolExecutor threadPool) {
-        return new ThreadPoolArgsVO(threadPool.getCorePoolSize(), threadPool.getMaxPoolSize(), threadPool.getKeepAliveSeconds(), threadPool.getQueueCapacity(), threadPool.getCapacityThreshold(), threadPool.getActiveThreshold(), threadPool.getQueue().getClass().getSimpleName(), threadPool.getAppName(), threadPool.getThreadPoolName(), threadPool.getThreadFactory().getClass().getSimpleName(), threadPool.getRejectedExecutionHandler().getClass().getSimpleName());
+        return new ThreadPoolArgsVO(
+                threadPool.getCorePoolSize(),
+                threadPool.getMaxPoolSize(),
+                threadPool.getKeepAliveSeconds(),
+                threadPool.getQueueCapacity(),
+                threadPool.getCapacityThreshold(),
+                threadPool.getActiveThreshold(),
+                threadPool.getQueue().getClass().getSimpleName(),
+                threadPool.getAppName(),
+                threadPool.getThreadPoolName(),
+                threadPool.getThreadFactory().getClass().getSimpleName(),
+                threadPool.getRejectedExecutionHandler().getClass().getSimpleName());
     }
 }
